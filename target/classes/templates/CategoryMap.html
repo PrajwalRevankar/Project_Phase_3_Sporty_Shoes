@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Add to category</title>
+</head>
+<body>
+<div align="center">
+<h1>Add to category</h1>
+</div>
+<form th:action="@{/backToAddShoe}" method="post">
+<table>
+<tr>
+<td>Shoe:</td>
+<td>
+<select name="prod">
+<option th:each="prod : ${slist}" th:value="${prod.id}" th:text="${prod.shoename}"/>  
+</select>
+</td>
+<td>Category:</td>
+<td>
+<select name="cat">
+<option th:each="cat : ${clist}" th:value="${cat.categoryId}" th:text="${cat.categoryName}"/>  
+</select>
+</td>
+</tr>
+</table>
+<input type="submit" value="Save">
+</form>
+</body>
+</html>

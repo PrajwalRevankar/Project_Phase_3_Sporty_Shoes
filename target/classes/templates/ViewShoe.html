@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Manage products</title>
+</head>
+<body>
+<div align="center">
+<h1>Shoe List</h1>
+</div>
+<form th:action="@{/back}" method="get">
+<input type="submit" value="Back">
+</form>
+<a th:href="@{/addshoe}">Add product</a>
+<div align="center">
+<table border="1">
+<thead>
+<tr>
+<th>Sl.No</th>
+<th>Product Name</th>
+<th>Product size</th>
+</tr>
+</thead>
+<tbody>
+<tr th:each="shoe : ${slist}">
+<td th:text=${shoe.id}></td>
+<td th:text=${shoe.shoename}></td>
+<td th:text=${shoe.size}></td>
+<td><a th:href="@{/deleteshoe/{id}(id=${shoe.id})}">Delete</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>

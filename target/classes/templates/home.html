@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Home Page</title>
+</head>
+<body>
+<div align="center">
+<h1>Welcome to Sporty Shoes</h1>
+</div>
+<div>
+<h2>Admin's Portal:</h2>
+</div>
+<div align="right">
+<form th:action="@{/logout}" method="get">
+<input type="submit" value="Logout">
+</form>
+</div>
+<div>
+<form th:action="@{/cpassword}" method="get">
+<input type="submit" value="Change password">
+</form>
+<hr style="width:100%;text-align:left;margin-left:0">
+<form th:action="@{/addshoe}" method="get">
+<input type="submit" value="Add Shoe">
+</form>
+<form th:action="@{/viewshoe}" method="get">
+<input type="submit" value="Manage product">
+</form>
+<br>
+<form th:action="@{/addcat}" method="get">
+<input type="submit" value="Add Category">
+</form>
+<form th:action="@{/viewcategory}" method="get">
+<input type="submit" value="Categories">
+</form>
+<hr style="width:100%;text-align:left;margin-left:0">
+<form th:action="@{/viewuser}" method="get">
+<input type="submit" value="User list">
+</form>
+<br>
+<form th:action="@{/viewreport}" method="get">
+<input type="submit" value="Purchase report">
+</form>
+<hr style="width:100%;text-align:left;margin-left:0">
+</div>
+</body>
+</html>

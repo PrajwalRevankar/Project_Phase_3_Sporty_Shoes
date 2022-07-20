@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<div align="center">
+<h2>Add Shoe</h2>
+</div>
+<form th:action="@{/back}" method="get">
+<input type="submit" value="Back">
+</form>
+<div align="center">
+<form th:action="@{/addshoes}" th:object="${shoe}" method="post">
+<table>
+<tr>
+<td>Shoe name:</td>
+<td><input type="text" th:field=*{shoename}></td>
+</tr>
+<tr>
+<td>Size:</td>
+<td><input type="tel" th:field=*{size}></td>
+</tr>
+<tr>
+<td>
+<input type="submit" value="Save">
+</td>
+</tr>
+</table>
+</form>
+</div>
+</body>
+</html>
